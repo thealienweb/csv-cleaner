@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSV Cleaner</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header>
+    <h1>CSV Cleaner</h1>
+  </header>
+
+  <main>
+    <!-- State 1: first visit, nothing selected yet -->
+    <section id="state-initial">
+      <p>Remove duplicate rows and extra spaces from your CSV, right in your browser.</p>
+      <p>Your file never leaves your device.</p>
+      <label class="button" for="file-input">Choose CSV file</label>
+      <input type="file" id="file-input" accept=".csv,text/csv">
+    </section>
+
+    <!-- State 2: file chosen, ready to clean -->
+    <section id="state-selected" hidden>
+      <p>Selected file: <span id="file-name">sample.csv</span> (<span id="file-size">12 KB</span>)</p>
+      <button id="clean-button" type="button">Clean CSV</button>
+      <button id="choose-another-button" type="button" class="secondary">Choose another file</button>
+    </section>
+
+    <!-- State 3: preview of the first rows of the file -->
+    <section id="state-preview" hidden>
+      <h2>Preview (first rows)</h2>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Email</th>
+              <th scope="col">City</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Ada</td>
+              <td>ada@example.com</td>
+              <td>London</td>
+            </tr>
+            <tr>
+              <td>Grace</td>
+              <td>grace@example.com</td>
+              <td>New York</td>
+            </tr>
+            <tr>
+              <td>Alan</td>
+              <td>alan@example.com</td>
+              <td>London</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- State 4: cleaning is running -->
+    <section id="state-processing" role="status" hidden>
+      <p>Cleaning your file…</p>
+      <div class="spinner" aria-hidden="true"></div>
+    </section>
+
+    <!-- State 5: cleaning finished -->
+    <section id="state-results" hidden>
+      <h2>Done!</h2>
+      <ul>
+        <li>Rows before: 100</li>
+        <li>Rows after: 92</li>
+        <li>Duplicates removed: 8</li>
+        <li>Cells trimmed: 15</li>
+      </ul>
+      <button id="download-button" type="button">Download cleaned CSV</button>
+      <button id="clean-another-button" type="button" class="secondary">Clean another file</button>
+    </section>
+
+    <!-- State 6: something went wrong -->
+    <section id="state-error" role="alert" hidden>
+      <h2>Something went wrong</h2>
+      <p id="error-message">Example error message.</p>
+      <button id="try-again-button" type="button">Try again</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>Free and private. No uploads.</p>
+  </footer>
+
+  <script src="js/app.js" defer></script>
+</body>
+</html>
