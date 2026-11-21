@@ -12,7 +12,10 @@
   --text: #eef3fa;          /* main text */
   --text-muted: #a8b6c8;    /* secondary text */
   --blue: #3b82f6;          /* primary accent */
-  --blue-hover: #2563eb;    /* accent on hover */
+  --blue-strong: #2563eb;        /* primary button background */
+  --blue-strong-hover: #1d4ed8;  /* primary button hover */
+  --blue-text: #60a5fa;          /* secondary button text */
+  --blue-text-hover: #93c5fd;    /* secondary button text on hover */
   --red: #f87171;           /* error accent */
   --border: #2a394d;        /* soft borders */
 
@@ -110,7 +113,7 @@ button,
   padding: 0.65rem 1.25rem;
   border: 1px solid transparent;
   border-radius: var(--radius);
-  background: var(--blue);
+  background: var(--blue-strong);
   color: #ffffff;
   font: inherit;
   font-weight: 600;
@@ -121,7 +124,7 @@ button,
 
 button:hover,
 .button:hover {
-  background: var(--blue-hover);
+  background: var(--blue-strong-hover);
 }
 
 button:focus-visible,
@@ -134,15 +137,15 @@ button:focus-visible,
 button.secondary,
 .button.secondary {
   background: transparent;
-  color: var(--blue);
+  color: var(--blue-text);
   border-color: var(--blue);
 }
 
 button.secondary:hover,
 .button.secondary:hover {
   background: transparent;
-  color: var(--blue-hover);
-  border-color: var(--blue-hover);
+  color: var(--blue-text-hover);
+  border-color: var(--blue-text-hover);
 }
 
 /* The label is a real button for mouse users; the file input stays keyboard
