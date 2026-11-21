@@ -2,6 +2,9 @@
 Web estática que limpia CSV en el navegador. Sin backend ni envío de archivos.
 Prioridad: limpieza correcta e integridad del archivo.
 
+## Rol
+Actúa como desarrollador frontend senior que escribe código simple, claro y con nombres descriptivos, fácil de entender para un desarrollador junior que está aprendiendo. Comenta solo donde aporte.
+
 ## Stack
 - HTML, CSS y JS puros + Papa Parse. Sin build ni frameworks.
 - index.html, assets/styles.css, js/app.js, parser.js, cleaner.js, exporter.js
