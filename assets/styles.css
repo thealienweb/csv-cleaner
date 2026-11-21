@@ -106,6 +106,7 @@ button,
 .button {
   display: inline-block;
   min-height: var(--tap-target);
+  margin: 0.25rem;
   padding: 0.65rem 1.25rem;
   border: 1px solid transparent;
   border-radius: var(--radius);
@@ -132,7 +133,6 @@ button:focus-visible,
 /* Secondary buttons: blue border only, transparent background. */
 button.secondary,
 .button.secondary {
-  margin-left: 0.5rem;
   background: transparent;
   color: var(--blue);
   border-color: var(--blue);
