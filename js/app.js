@@ -1,4 +1,4 @@
-// CSV Cleaner — interface wiring (no cleaning logic yet).
+(// CSV Cleaner — interface wiring (no cleaning logic yet).
 
 // The six interface states. Each one matches a section id "state-" + name.
 const STATE_NAMES = ["initial", "selected", "preview", "processing", "results", "error"];
