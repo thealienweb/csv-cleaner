@@ -36,15 +36,38 @@ function parseCsvFile(file) {
       skipEmptyLines: true,
       encoding: "UTF-8",
       complete: function (results) {
+        // An unterminated quoted value breaks the row: fail with a clear message.
+        const missingQuote = results.errors.find(function (error) {
+          return error.code === "MissingQuotes";
+        });
+
+        if (missingQuote) {
+          if (typeof missingQuote.row === "number") {
+            reject(new Error(
+              "A quoted value near row " + (missingQuote.row + 1) + " is never closed. Please fix the file and try again."
+            ));
+          } else {
+            reject(new Error("A quoted value in the file is never closed. Please fix the file and try again."));
+          }
+          return;
+        }
+
         if (results.data.length === 0) {
           reject(new Error("This file has no data."));
           return;
         }
 
+        // Copy the header row and remove a possible BOM from the first cell.
+        const headers = results.data[0].slice();
+
+        if (typeof headers[0] === "string") {
+          headers[0] = headers[0].replace(/^\uFEFF/, "");
+        }
+
         resolve({
-          headers: results.data[0],
+          headers: headers,
           rows: results.data.slice(1),
-          delimiter: results.meta.delimiter,
+          delimiter: results.meta.delimiter || ",",
           errors: results.errors,
         });
       },
