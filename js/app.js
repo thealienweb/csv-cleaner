@@ -111,3 +111,8 @@ fileInput.addEventListener("change", function () {
       showState("error");
     });
 });
+
+// "Try again" takes the user back to the start screen.
+document.getElementById("try-again-button").addEventListener("click", function () {
+  showState("initial");
+});
