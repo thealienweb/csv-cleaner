@@ -1,3 +1,0 @@
-Problemas a cubrir: (1) detectar codificación (UTF-8, Latin-1, cp1252) y mojibake tipo "Ã©"; (2) detectar delimitador (, ; tab); (3) comillas sueltas/anidadas y filas partidas; (4) salida UTF-8 con BOM para Excel.
-Tarea: diseña la arquitectura mínima (en JavaScript puro, usando Papa Parse y TextDecoder, sin Python), casos de prueba con archivos rotos y un informe de lo que se reparó o no. Evalúa si tiene sentido venderla, sabiendo que existen soluciones gratuitas manuales y web.
-Entrega: plan por pasos, código de ejemplo corto, riesgos.
