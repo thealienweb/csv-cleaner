@@ -23,7 +23,7 @@ Pro, pagos, login, base de datos, backend, validar emails, fechas, limpieza por 
 ## Forma de trabajo
 - Haz solo lo pedido; cambios pequeños (hay límite de peticiones diarias).
 - Al terminar: resume y señala decisiones a revisar. El resumen no sustituye al código: el usuario verifica el código.
-- Lee docs/constitution.md y MEMORY.md al empezar.
+- Lee docs/constitution.md, MEMORY.md y la spec activa (specs/NNN-*/) al empezar. La spec manda: lo que no está en la spec no se implementa; si falta una decisión, para y pregunta.
 
 ## Memoria
 - Al terminar una tarea, actualiza MEMORY.md: estado actual, decisiones (con su porqué) y errores a evitar.
@@ -36,4 +36,4 @@ Pro, pagos, login, base de datos, backend, validar emails, fechas, limpieza por 
 - Nunca: backend, enviar datos a servidores, innerHTML con datos del CSV.
 
 ## Verificación
-- Probar en el navegador con un CSV de ejemplo; tests con `node --test`.
+- Probar en el navegador con un CSV de ejemplo; tests con `node --test`; tras editar JS, `node --check js/archivo.js`.
