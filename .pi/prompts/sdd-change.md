@@ -1,5 +1,5 @@
 ---
-description: SDD · Nuevo requisito: primero la spec, luego el código (uso: /sdd-change 001-nombre requisito)
+description: SDD · Nuevo requisito - primero la spec, luego el código (uso - /sdd-change 001-nombre requisito)
 argument-hint: <NNN-nombre> <requisito nuevo>
 ---
 Nuevo requisito para la spec specs/$1/. Argumentos completos: $ARGUMENTS (la primera palabra es el nombre de la carpeta; el resto es el requisito).

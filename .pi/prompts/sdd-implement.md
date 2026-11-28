@@ -1,5 +1,5 @@
 ---
-description: SDD · Implementa UNA tarea, tests primero (uso: /sdd-implement 001-nombre T3)
+description: SDD · Implementa UNA tarea, tests primero (uso - /sdd-implement 001-nombre T3)
 argument-hint: <NNN-nombre> <Tn>
 ---
 Implementa SOLO la tarea $2 de specs/$1/tasks.md, siguiendo specs/$1/plan.md, docs/constitution.md, AGENTS.md y la skill sdd. NO leas js/vendor/papaparse.min.js (es minificado y gasta peticiones).

@@ -1,5 +1,5 @@
 ---
-description: SDD · Dónde estamos: fase actual y siguiente paso de una spec
+description: SDD · Dónde estamos - fase actual y siguiente paso de una spec
 argument-hint: <NNN-nombre>
 ---
 Lee specs/$1/ (spec.md, plan.md y tasks.md, los que existan) y MEMORY.md. NO modifiques ningún archivo.

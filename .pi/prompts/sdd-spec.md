@@ -1,5 +1,5 @@
 ---
-description: SDD · Entrevista y genera la spec (uso: /sdd-spec 001-nombre idea inicial)
+description: SDD · Entrevista y genera la spec (uso - /sdd-spec 001-nombre idea inicial)
 argument-hint: <NNN-nombre> <idea inicial>
 ---
 NO escribas código en ningún momento. Solo puedes crear o editar archivos dentro de specs/$1/. Usa la skill sdd. Lee docs/constitution.md y MEMORY.md. Si existe notas/problemas-csv.md, léelo: son notas de investigación, NO son requisitos.
